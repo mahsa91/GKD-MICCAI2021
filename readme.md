@@ -2,7 +2,7 @@ GKD: Semi-supervised Graph Knowledge Distillation for Graph-Independent Inferenc
 ====
 
 Here is the code for node classification in graphs when the graph is not available at test time.
-Ghorbani et.al. "GKD: Semi-supervised Graph Knowledge Distillation for Graph-Independent Inference" [1]
+Ghorbani et.al. ["GKD: Semi-supervised Graph Knowledge Distillation for Graph-Independent Inference"](https://arxiv.org/pdf/2104.03597) [1]
 Due to the aggregation step in graph neural networks, their performance relies on the availability of graph in both the training and testing phases. It is a common situation that the graph between nodes does not exist at inference time. GKD suggests aggregating both node features and graph using a teacher network and distilling the training knowledge to a student who only uses the node features as its input. Now the student network is able to predict the test node labels without the graph between them. Although the teacher network can be an arbitrary graph neural network, GKD suggests transferring the aggregation step from input space to label space. To this end, a modified version of the label-propagation algorithm has been provided to achieve a balance between the importance of the graph and the importance of features in the final node labels. Here is an overview of the method.
 ![GKD overview](https://github.com/mahsa91/GKD/blob/main/GKD.JPG?raw=true)
 
