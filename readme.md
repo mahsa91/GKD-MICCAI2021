@@ -9,7 +9,6 @@ Due to the aggregation step in graph neural networks, their performance relies o
 
 
 
-
 Usage 
 ------------
 The main file is "main.py". Run with ```python train.py```
